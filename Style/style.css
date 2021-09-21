@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    border:  2px solid white;
+    display: inline-block;
+}
