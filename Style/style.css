@@ -15,3 +15,34 @@ h1 {
     border:  2px solid white;
     display: inline-block;
 }
+
+.o {
+    position: relative;
+}
+
+.o::after {
+    position: absolute;
+    line-height: 100px;
+    content: '\2B55';
+    font-size: 50px;
+    font-size: 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.x {
+    position: relative;
+}
+
+.x:after {
+    position: absolute;
+    line-height: 100px;
+    content: '\274C';
+    font-size: 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
