@@ -32,11 +32,6 @@ function handleMove(position) {
 
             playerTurn = (playerTurn == 1) ? 2 : 1;
 
-            /* if (playerTurn == 1) {
-                playerTurn = 2;
-            } else {
-                playerTurn = 1;
-            } */
         }
     }
     return gameOver;
