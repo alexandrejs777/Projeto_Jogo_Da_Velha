@@ -6,31 +6,75 @@ document.addEventListener('DOMContentLoaded', () => {
         square.addEventListener('click', handleClick);
 
     });
-    
+
 })
 
-function handleClick(event){
+function handleClick(event) {
 
     let square = event.target;
     let position = square.id;
 
-    handleMove(position);
-    updateSquares();
+
+    if (handleMove(position)) {
+
+        setTimeout(() => {
+
+            let resultMessage = alert('O jogo acabou! O vencedor foi o jogador nº ' + playerTurn);
+
+            if (symbols[playerTurn - 1] == 'o') {
+                resultMessage;
+                oScore++;
+                updateScore();
+                resetGame();
+            }
+            else {
+                resultMessage;
+                xScore++;
+                updateScore();
+                resetGame();
+            }
+
+        }, 100);
+    }
+
+    if (drawGame()) {
+        setTimeout(() => {
+            alert('O jogo encerrou com empate!');
+            resetGame();
+        }, 100);
+    }
+
+    updateSquare(position);
 }
 
-function updateSquares(){
+function updateScore() {
+    let oPlayer = document.getElementById("oPlayer");
+    let xPlayer = document.getElementById("xPlayer");
+    oPlayer.innerText = oScore;
+    xPlayer.innerText = xScore;
+}
 
-    let squares = document.querySelectorAll(".square");
+function updateSquare(position) {
+    let square = document.getElementById(position.toString());
 
-    squares.forEach((square) => {
+    let symbol = board[position];
+    square.innerHTML = `<div class='${symbol}'></div>`
+}
 
-        let position = square.id;
-        let symbol = board[position];
+function resetGame() {
+    board.fill('');
+    playerTurn = 1;
+    gameOver = false;
 
-        if (symbol != ''){
-            square.innerHTML = `<div class='${symbol}'></div>`
-        }
+    for (let position = 0; position < board.length; position++) {
+        updateSquare(position);
+    }
+}
 
-    })
-
+function restartScore() {
+    playerTurn = 1;
+    oScore = 0;
+    xScore = 0;
+    oPlayer.innerText = oScore;
+    xPlayer.innerText = xScore;
 }
