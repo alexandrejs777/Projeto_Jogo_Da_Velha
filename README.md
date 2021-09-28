@@ -21,3 +21,9 @@ O objetivo é ter uma introdução a MVC (Model View Controller), onde o control
   <div style="display: inline_block"><br>
     <img align="center" width:"70px" src="https://user-images.githubusercontent.com/85634326/135137834-547bc84b-7934-4ce8-bd1b-ba22e258c629.png">
   </div>                                                                                                                                     
+  
+# Fontes
+  
+  <p>Permanent Marker</p>
+  
+  <p>https://fonts.google.com/specimen/Permanent+Marker#standard-styles</p>
