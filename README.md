@@ -6,7 +6,7 @@ Projeto para o curso ProgramadorBR no módulo Javascript avançado.<br>
 
 O objetivo é ter uma introdução a MVC (Model View Controller), onde o controlador faz a ligação entre a parte visual e a funcional do projeto.<br>
 
-# Técnologias Utilizadas
+# Tecnologias Utilizadas
 
 <div style="display: inline_block"><br>
   <img align="center" alt="ale-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
